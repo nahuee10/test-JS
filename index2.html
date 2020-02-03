@@ -1,0 +1,29 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            
+            var valorIngresado = parseInt(prompt("Ingrese un numero por URL: "));
+            
+           function pasarNumeroURL () {
+               if ((valorIngresado >= 2) && (valorIngresado <= 10) && (valorIngresado % 2 == 0) && Number.isInteger(valorIngresado)) {
+                var dato = valorIngresado;
+                $(location).attr('href',"test2.php?id= " + dato);
+                } else {
+                    alert ("Ingrese otro valor")
+                    location.reload();
+                }
+            }
+
+            pasarNumeroURL() ;
+        
+        </script>
+    </head>
+        <body>
+            
+            
+      
+        </body>
+
+</html>
